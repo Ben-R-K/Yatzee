@@ -11,6 +11,11 @@ namespace Yatzee
         public static readonly Dictionary<string, int?> YatzeeCard = new Dictionary<string, int?>();
         public static readonly List<Player> players = new List<Player>();
 
+        static World()
+        {
+            PopulateYatzeeCard();
+        }
+
         private static void PopulateYatzeeCard()
         {
             YatzeeCard.Add("Aces", null);
@@ -39,10 +44,6 @@ namespace Yatzee
                 players.Add(player);
             }
 
-            foreach(Player p in players)
-            {
-                
-            }
         }
     }
 }
