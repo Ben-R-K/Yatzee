@@ -9,17 +9,14 @@ namespace Yatzee
     public class Player
     {
         public int Id;
+        public List<Dice> PlayerDices = new List<Dice>();
         public Dictionary<string, int?> PlayerCard = new Dictionary<string, int?>();
 
-        public Player(int id, Dictionary<string, int?> playercard)
+        public Player(int id, List<Dice> playerdices, Dictionary<string, int?> playercard)
         {
             Id = id;
+            PlayerDices= playerdices;
             PlayerCard = playercard;
         }
-    }
-
-    public void Turn()
-    {
-
     }
 }

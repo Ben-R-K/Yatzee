@@ -9,11 +9,13 @@ namespace Yatzee
     public static class World
     {
         public static readonly Dictionary<string, int?> YatzeeCard = new Dictionary<string, int?>();
+        public static readonly List<Dice> dices= new List<Dice>();
         public static readonly List<Player> players = new List<Player>();
 
         static World()
         {
             PopulateYatzeeCard();
+            PopulateDices();
         }
 
         private static void PopulateYatzeeCard()
@@ -34,13 +36,20 @@ namespace Yatzee
 
         }
 
+        private static void PopulateDices()
+        {
+            for(int i = 0;i < 5; i++)
+            {
+                dices.Add(new Dice(i + 1, 6));
+            }
+        }
 
         public static void PlayerCount(int NumOfPlayers)
         {
 
             for (int i = 0; i < NumOfPlayers; i++)
             {
-                Player player = new Player(i+1, YatzeeCard);
+                Player player = new Player(i+1, dices, YatzeeCard);
                 players.Add(player);
             }
 
