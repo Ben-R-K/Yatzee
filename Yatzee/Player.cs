@@ -17,4 +17,9 @@ namespace Yatzee
             PlayerCard = playercard;
         }
     }
+
+    public void Turn()
+    {
+
+    }
 }
