@@ -8,11 +8,13 @@ namespace Yatzee
 {
     public class Player
     {
-        public Dictionary<string, int?> YatzeeCard = new Dictionary<string, int?>();
+        public int Id;
+        public Dictionary<string, int?> PlayerCard = new Dictionary<string, int?>();
 
-        public Player(Dictionary<string, int?> yatzeeCard)
+        public Player(int id, Dictionary<string, int?> playercard)
         {
-            YatzeeCard = yatzeeCard;
+            Id = id;
+            PlayerCard = playercard;
         }
     }
 }
