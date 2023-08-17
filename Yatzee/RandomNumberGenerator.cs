@@ -24,7 +24,7 @@ namespace Engine
             int range = max - min + 1;
             double randomValueInRange = Math.Floor(multiplier*range);
 
-            return (int)(min * randomValueInRange);
+            return (int)(min * (randomValueInRange+1));
         }
     }
 }

@@ -20,7 +20,7 @@ namespace Yatzee
 
         public int Roll()
         {
-            return RandomNumberGenerator.NumberBetween(0, Sides);
+            return RandomNumberGenerator.NumberBetween(1, Sides-1);
         }
     }
 }
